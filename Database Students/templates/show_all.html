@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+   <head></head>
+   <body>
+   <h2 style="text-align:center;">
+   <marquee> <a href="http://www.iiitd.ac.in">For further Information:Click Here</a> </h2> </marquee>
+    <img src="static/IMAGE.jpg" alt="IIIT DELHI" width="660" height="330" />
+      <body style="background-color:powderblue;">
+
+
+      <h3>
+         <a href = "{{ url_for('show_all') }}">Presenting you :The Student DATABASE </a>
+      </h3>
+
+      <hr/>
+      {%- for message in get_flashed_messages() %}
+         {{ message }}
+      {%- endfor %}
+
+      <h4 style="color:black;"> Students  (<a href = "{{ url_for('new') }}"> Add Student </a>)</h4>
+
+      <table>
+         <thead>
+            <tr>
+               <th>Name</th>
+               <th>email</th>
+               <th>Section</th>
+               <th>Group</th>
+            </tr>
+         </thead>
+
+         <tbody>
+            {% for student in students %}
+               <tr>
+                  <td>{{ student.name }}</td>
+                  <td>{{ student.email }}</td>
+                  <td>{{ student.section }}</td>
+                  <td>{{ student.Group }}</td>
+               </tr>
+            {% endfor %}
+         </tbody>
+      </table>
+     <h4> <a href=http://www.iiitd.ac.in> visit iiitd.ac.in </a> </h4>
+   </body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+   <body style="background-color:lightcoral;">
+>
+
+   
+      <h3>EDITING /CREATING A RECORD!!!</h3>
+      <hr/>
+      
+      {%- for category, message in get_flashed_messages(with_categories = true) %}
+         <div class = "alert alert-danger">
+            {{ message }}
+         </div>
+      {%- endfor %}
+      
+      <form action = "{{ request.path }}" method = "post">
+         <label for = "name">Name</label><br>
+         <input type = "text" name = "name" placeholder = "Name" /><br>
+         <label for = "email">email</label><br>
+         <input type = "text" name = "email" placeholder = "email" /><br>
+         <label for = "section">section</label><br>
+         <textarea name = "section" placeholder = "section"></textarea><br>
+         <label for = "Group">GROUPS :D</label><br>
+         <input type = "text" name = "Group" placeholder = "Group" /><br>
+         <input type = "submit" value = "Submit" />
+      </form>
+      <a href="http://www.iiitd.ac.in">
+
+      <img src="static/IMAGE.jpg" alt="IIIT DELHI" width="160" height="130" />For going to iiitd.ac.in click on the image.
+      </a>
+      
+   </body>
+</html>
