@@ -1,5 +1,4 @@
 #made by Anushka Bhandari Viresh Gupta
-#copyright Viresh Gupta
 #Plagiarism scrictly reported #do not tamper with the code
 
 from flask import Flask,render_template,url_for,request,session,escape
